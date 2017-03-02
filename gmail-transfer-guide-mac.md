@@ -158,21 +158,23 @@ or the label name is a reserved name) or, as I learned, the sender of the messag
 (the `From` field) is unusually formatted or too long.
 
 There are two possible approaches:
+
 1. Add the `--fast-restore` flag at the end of your `gyb` restore command. Note
 that the messages restored this way will not be placed within their original
 conversations after restore and possible duplicates of these messages will not be
 removed. If only a handful of messages threw this error, then this flag might be
 the way to go.
-2.  For the very intense, add the following string as a suffix to the restore
-    command:
-    ```
-    --debug > debug.log
-    ```
-    This sends the full debug output to the `debug.log` file, which provides
-    a detailed description of the messages being restored and the APIs called
-    by the underlying Python script. From the `debug.log` file, you can
-    identify the JSON objects that store the messages that couldn't get
-    restored. Note that the `raw` field within those JSON objects encodes the
-    actual message text using the `urlsafe_b64encode` method of the `base64`
-    Python module.
+2. For the very intense, add the following string as a suffix to the restore
+   command:
+
+   ```
+   --debug > debug.log
+   ```
+   This sends the full debug output to the `debug.log` file, which provides
+   a detailed description of the messages being restored and the APIs called
+   by the underlying Python script. From the `debug.log` file, you can
+   identify the JSON objects that store the messages that couldn't get
+   restored. Note that the `raw` field within those JSON objects encodes the
+   actual message text using the `urlsafe_b64encode` method of the `base64`
+   Python module.
     
