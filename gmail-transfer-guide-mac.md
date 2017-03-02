@@ -1,27 +1,28 @@
 # How to transfer your email (with labels!) from one Gmail account to another
 #### *Mac Edition*
 For the obsessive among us who carefully curate their emails into
-different gmail labels, there is no straightforward online guide for
-transfering both emails and labels from one account to another.
+different folders (what Gmail calls labels), there is no straightforward
+online guide for transfering both emails and labels from one account to another.
 
 If you're comfortable doing basic things on the terminal, then this is
 your guide. Note that this guide is for Mac users and a separate guide
 will be written for those using Windows.
 
-## 1. Download and set up `Got Your Back`
+## 1. Download and set up `got-your-back`
 There's a command line tool with a cute name on GitHub that directly
-calls Gmail's APIs, doing all the heavy lifting needed to create a
-local backup of your emails and labels and also restore an account with
-emails and labels from that backup.
+calls Gmail's APIs, doing all the heavy lifting needed to transfer emails
+and labels. The process involves first creating a local backup of those
+emails and labels from one account and restoring from backup on another
+account.
 
-Download the latest release of `Got Your Back` from this
+Download the latest release of `got-your-back` from this
 [link](https://github.com/jay0lee/got-your-back/releases).
-It should look something like `gyb-1.0-macos.tar.xz`
+It should look something like `gyb-1.0-macos.tar.xz`.
 
-Clicking on the file will unarchive it, leaving a `gyb` folder in your
+Clicking on the file will unzip it, leaving a `gyb` folder in your
 downloads. For simplicity's sake, we'll leave it there.
 
-Now open the terminal and move to the directory that contains the `gyb`
+Now open terminal.app and change to the directory that contains the `gyb`
 executible with the following command:
 ```
 $ cd ~/Downloads/gyb
@@ -54,7 +55,7 @@ Select the actions you wish GYB to be able to perform for old.email@gmail.com
 
 Press `7` and the enter key, and a prompt will appear in your browser.
 Enter your credentials and press `Allow`. Then you should see a
-confirmation screen, which says `The authentication flow has completed.`
+confirmation screen which says `The authentication flow has completed.`.
 
 Looking back at the terminal, the backup process should have begun
 ```
@@ -67,15 +68,16 @@ GYB already has a backup of 0 messages
 GYB needs to backup 22648 messages
 backed up 900 of 22648 messages
 ```
-The number `22648` will differ depending upon the number of emails being backed up.
+> Note: the number `22648` will differ depending upon the number of emails you
+> need to back up.
 
 Now go and make some tea. This can take over an hour if you have more
 than 3 GB of emails. But when the prompt is done, you're all backed up,
 with the contents of the backup in a local directory called `my_backup` located
-in `~/Downloads/gyb/my_backup`.
+in your downloads folder at `~/Downloads/gyb/my_backup`.
 
 ## 3. Restore
-We're now going to take our local backup and restore it to your new email,
+You're now going to take your local backup and restore it to your new email,
 `new.email@gmail.com`, effectively transfering the contents of one
 account to another.
 
@@ -85,7 +87,7 @@ $ gyb --email new.email@gmail.com --action restore --local-folder my_backup
 ```
 
 As with `old.email@gmail.com`, you will once again see a prompt with options
-1-6, and you will once again press `7` and enter. This will again bring up the
+1-6, and you will once again press `7` and enter. Like before, this will bring up the
 browser. Enter your credentials and click `Allow` to bring up the restore process.
 
 ```
@@ -95,10 +97,10 @@ Using backup folder my_backup
 restoring single large message (9/6490)
 ```
 
-At default settings, `gyb` will restore 10 messages at a time, or one really big
-message. I've found that this process can be up 5 times slower, so modify
-your machine's energy saver settings to prevent it from falling asleep, and
-go and run some errands. I left mine working overnight.
+`got-your-back` will restore messages 10 at a time, or 1 at a time if the messages
+are really big. I've found that this process can take up to 5 times longer than
+the backup, so modify your machine's energy saver settings to prevent it from
+falling asleep, and go and run some errands. I left mine working overnight.
 
 If you go to `new.email@gmail.com`, you should see your old labels appearing, a
 sign that all this magic is working!
@@ -130,8 +132,8 @@ And that's it!
 [settings_button]: http://lh6.ggpht.com/snsP5-ODgFFqVJhxS5La7OAqsAmO-GwYWWERMFPW5R4MXcxp0zUZ5Bq6lRFqrvk92lA=w18-h18
 
 ## Additional Reading
-Parts of this guide are gratuitously borrowed from the
-`Got Your Back` [Wiki](https://github.com/jay0lee/got-your-back/wiki) and Google's
+Parts of this guide are graciously borrowed from the
+`got-your-back` [Wiki](https://github.com/jay0lee/got-your-back/wiki) and Google's
 [Gmail documentation](https://support.google.com/mail/answer/10957?hl=en), so please
 feel free to go back to those resources for more detailed descriptions of any of
 the steps described above.
@@ -140,7 +142,7 @@ the steps described above.
 
 As a preface, there is a
 [Google Group](https://groups.google.com/forum/#!forum/got-your-back) devoted to
-`Got Your Back` that you should definitely consult if you run into any issues.
+`got-your-back` that you should definitely consult if you run into any issues.
 
 ### 'Error 400: Invalid From header'
 ```
