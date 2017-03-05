@@ -20,13 +20,15 @@ Download the latest release of `got-your-back` from this
 [link](https://github.com/jay0lee/got-your-back/releases).
 It should look something like `gyb-1.0-macos.tar.xz`.
 
-Clicking on the file will unzip it, leaving a `gyb` folder in your
-downloads. For simplicity's sake, just leave it there.
-
-Now open terminal.app and change to the directory that contains the `gyb`
-executable with the following command:
+Open terminal.app and change to the directory that contains the download with
+the following command:
 ```
-$ cd ~/Downloads/gyb
+$ cd ~/Downloads
+```
+Unzip the download with `tar`, and then enter the unzipped directory:
+```
+$ tar -zxf gyb-1.0-macos.tar.xz
+$ cd gyb
 ```
 
 ## 2. Backup
