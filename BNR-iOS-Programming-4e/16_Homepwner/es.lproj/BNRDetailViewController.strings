@@ -1,0 +1,15 @@
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "Dn8-DB-ECh"; */
+"Dn8-DB-ECh.text" = "Label";
+
+/* Class = "IBUIBarButtonItem"; title = "Item"; ObjectID = "FoX-sO-0qT"; */
+"FoX-sO-0qT.title" = "Item";
+
+/* Class = "IBUILabel"; text = "Name"; ObjectID = "bWQ-qC-9V1"; */
+"bWQ-qC-9V1.text" = "Nombre";
+
+/* Class = "IBUILabel"; text = "Serial"; ObjectID = "eHE-gn-tac"; */
+"eHE-gn-tac.text" = "Numéro de serie";
+
+/* Class = "IBUILabel"; text = "Value"; ObjectID = "tVp-82-Orp"; */
+"tVp-82-Orp.text" = "Valor";
