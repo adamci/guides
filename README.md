@@ -6,5 +6,5 @@ A collection of walkthroughs and tutorials I've written:
   ](./gmail-transfer-guide-mac.md)
 * How to transfer Gmail emails and labels from one
   account to another [Windows] - TODO
-* [BNR Guide toiOS Programming 4e (Solution Set)
+* [BNR Guide to iOS Programming 4e (Solution Set)
   ](./BNR-iOS-Programming-4e)
