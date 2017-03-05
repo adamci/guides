@@ -1,5 +1,5 @@
-BNR Guide to iOS Programming (Solution Set)
-===========================================
+BNR Guide to iOS Programming 4e (Solution Set)
+==============================================
 
 The following is a reference for those working through The Big Nerd Ranch's Guide to
 iOS Programming (4th Edition). This solution set is a product of my time with the book,
