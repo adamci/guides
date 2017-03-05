@@ -112,6 +112,9 @@ sign that the magic is working!
 You can close the terminal once it's done restoring. The last step is
 entirely in the browser!
 
+As a cleanup step, don't forget to delete, `gyb-1.0-macos.tar.xz` and `gyb`, both
+located in your downloads folder. They are no longer needed.
+
 ## 4. Set up forwarding
 > Note: this last step is optional in the case that `old.email@gmail.com` continues
 > to receive emails.
