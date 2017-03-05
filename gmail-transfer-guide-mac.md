@@ -1,36 +1,37 @@
 # How to transfer your email (with labels!) from one Gmail account to another
 #### *Mac Edition*
 For the obsessive among us who carefully curate their emails into
-different folders (what Gmail calls labels), there is no straightforward
-online guide for transfering both emails and labels from one account to another.
+different folders (which in Gmail are called "labels"), there is no straightforward
+online guide for transferring emails with their associated labels/folders from one
+account to another.
 
 If you're comfortable doing basic things on the terminal, then this is
-your guide. Note that this guide is for Mac users and a separate guide
+your guide. Note that this guide is for Mac users &#8212; a separate guide
 will be written for those using Windows.
 
 ## 1. Download and set up `got-your-back`
-There's a command line tool with a cute name on GitHub that directly
-calls Gmail's APIs, doing all the heavy lifting needed to transfer emails
-and labels. The process involves first creating a local backup of those
-emails and labels from one account and restoring from backup on another
-account.
+There's a command line tool with a cute name (`got-your-back`) on GitHub that
+directly calls Gmail's APIs, doing all the heavy lifting needed to transfer
+emails and labels. The process involves first creating a local backup of those
+emails and labels from one account and then restoring them from this backup onto
+another account.
 
 Download the latest release of `got-your-back` from this
 [link](https://github.com/jay0lee/got-your-back/releases).
 It should look something like `gyb-1.0-macos.tar.xz`.
 
 Clicking on the file will unzip it, leaving a `gyb` folder in your
-downloads. For simplicity's sake, we'll leave it there.
+downloads. For simplicity's sake, just leave it there.
 
 Now open terminal.app and change to the directory that contains the `gyb`
-executible with the following command:
+executable with the following command:
 ```
 $ cd ~/Downloads/gyb
 ```
 
 ## 2. Backup
 Suppose you wanted to transfer emails and labels from `old.email@gmail.com`
-to `new.email@gmail.com`. It would just be two lines on the terminal.
+to `new.email@gmail.com`. This would take just two lines on the terminal.
 
 First, to back up:
 ```
@@ -53,7 +54,7 @@ Select the actions you wish GYB to be able to perform for old.email@gmail.com
       7)  Continue
 ```
 
-Press `7` and the enter key, and a prompt will appear in your browser.
+Press `7` and then the enter key, and a prompt will appear in your browser.
 Enter your credentials and press `Allow`. Then you should see a
 confirmation screen which says `The authentication flow has completed.`.
 
@@ -71,14 +72,14 @@ backed up 900 of 22648 messages
 > Note: the number `22648` will differ depending upon the number of emails you
 > need to back up.
 
-Now go and make some tea. This can take over an hour if you have more
-than 3 GB of emails. But when the prompt is done, you're all backed up,
-with the contents of the backup in a local directory called `my_backup` located
-in your downloads folder at `~/Downloads/gyb/my_backup`.
+Now go and make some tea. This process can take over an hour, if you have more
+than 3 GB of emails. But when the prompt is done, your emails will be all backed
+up, with the contents of the backup in a local directory called `my_backup`
+located in your downloads folder at `~/Downloads/gyb/my_backup`.
 
 ## 3. Restore
 You're now going to take your local backup and restore it to your new email,
-`new.email@gmail.com`, effectively transfering the contents of one
+`new.email@gmail.com`, effectively transferring the contents of one
 account to another.
 
 To restore, type the following:
@@ -87,8 +88,9 @@ $ gyb --email new.email@gmail.com --action restore --local-folder my_backup
 ```
 
 As with `old.email@gmail.com`, you will once again see a prompt with options
-1-6, and you will once again press `7` and enter. Like before, this will bring up the
-browser. Enter your credentials and click `Allow` to bring up the restore process.
+1-6, and you will once again press `7` and then enter. As before, this will bring
+up the browser. Enter your credentials and click `Allow` to bring up the restore
+process.
 
 ```
 $ ./gyb --email adam.cimpeanu@yale.edu --action restore --local-folder my_backup
@@ -98,12 +100,12 @@ restoring single large message (9/6490)
 ```
 
 `got-your-back` will restore messages 10 at a time, or 1 at a time if the messages
-are really big. I've found that this process can take up to 5 times longer than
-the backup, so modify your machine's energy saver settings to prevent it from
-falling asleep, and go and run some errands. I left mine working overnight.
+are very large. I've found that this process can take up to 5 times longer than
+the backup, so be sure to modify your machine's energy saver settings to prevent it
+from falling asleep, and then go and run some errands. I left mine working overnight.
 
 If you go to `new.email@gmail.com`, you should see your old labels appearing, a
-sign that all this magic is working!
+sign that the magic is working!
 
 You can close the terminal once it's done restoring. The last step is
 entirely in the browser!
@@ -153,9 +155,9 @@ ERROR: 400: Invalid From header. Skipping message restore, you can retry later w
 restoring 1 messages (22644/22644)  
 ```
 This message crops up if there's something weird about the message being restored.
-This can either be that the message has an unusual label (meaning, weird characters
-or the label name is a reserved name) or, as I learned, the sender of the message
-(the `From` field) is unusually formatted or too long.
+This can either be that the message has an unusual label (for example, weird
+characters or the label name is a reserved name) or, as I learned, the sender of
+the message (the `From` field) is unusually formatted or too long.
 
 There are two possible approaches:
 
@@ -164,8 +166,8 @@ that the messages restored this way will not be placed within their original
 conversations after restore and possible duplicates of these messages will not be
 removed. If only a handful of messages threw this error, then this flag might be
 the way to go.
-2. For the very intense, add the following string as a suffix to the restore
-   command:
+2. If you want to actually diagnose the problem, add the following string as a suffix
+   to the restore command:
 
    ```
    --debug > debug.log
