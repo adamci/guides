@@ -151,6 +151,12 @@ As a preface, there is a
 [Google Group](https://groups.google.com/forum/#!forum/got-your-back) devoted to
 `got-your-back` that you should definitely consult if you run into any issues.
 
+Also note that by default, the backup and restore operations are idempotent. This
+means that if you run the restore command again, for example, your email account
+won’t have multiple copies of the same emails from the different restores, just a
+single copy of them. In fact, rerunning backup or restore will take less time
+because the tool won’t try to iterate over emails that have already been transferred.
+
 ### 'Error 400: Invalid From header'
 ```
 restoring 10 messages (20847/22644)                                             
