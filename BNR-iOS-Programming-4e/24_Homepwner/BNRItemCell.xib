@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="95" id="0Ld-MW-D8p" customClass="BNRItemCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Ld-MW-D8p" id="fHR-DB-Ma1">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9hO-z0-u5w">
+                        <rect key="frame" x="2" y="2" width="40" height="40"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="J6y-7F-G2u"/>
+                            <constraint firstAttribute="width" constant="40" placeholder="YES" id="JTx-ti-Uvl"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwq-eT-B8Q">
+                        <rect key="frame" x="49" y="2" width="201" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9T-qN-8D2">
+                        <rect key="frame" x="258" y="11" width="42" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSi-dz-FKk">
+                        <rect key="frame" x="49" y="25" width="201" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asv-El-rxN">
+                        <rect key="frame" x="2" y="2" width="40" height="40"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <state key="normal">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="showImage:" destination="0Ld-MW-D8p" eventType="touchUpInside" id="xmg-lG-q6o"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="G9T-qN-8D2" secondAttribute="trailing" constant="20" id="9Eh-MW-GP5"/>
+                    <constraint firstItem="G9T-qN-8D2" firstAttribute="leading" secondItem="nSi-dz-FKk" secondAttribute="trailing" constant="8" id="Awd-QH-hnM"/>
+                    <constraint firstAttribute="centerY" secondItem="9hO-z0-u5w" secondAttribute="centerY" id="Fbj-Qi-1Y0"/>
+                    <constraint firstItem="nSi-dz-FKk" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vwq-eT-B8Q" secondAttribute="bottom" constant="2" id="OFh-Ib-oC9"/>
+                    <constraint firstItem="9hO-z0-u5w" firstAttribute="bottom" secondItem="asv-El-rxN" secondAttribute="bottom" id="OYk-zI-eqV"/>
+                    <constraint firstAttribute="centerY" secondItem="G9T-qN-8D2" secondAttribute="centerY" id="e25-Jm-rRa"/>
+                    <constraint firstItem="G9T-qN-8D2" firstAttribute="leading" secondItem="vwq-eT-B8Q" secondAttribute="trailing" constant="8" id="fXx-0D-tbL"/>
+                    <constraint firstItem="nSi-dz-FKk" firstAttribute="leading" secondItem="9hO-z0-u5w" secondAttribute="trailing" constant="7" id="fq8-vj-jPJ"/>
+                    <constraint firstItem="vwq-eT-B8Q" firstAttribute="leading" secondItem="9hO-z0-u5w" secondAttribute="trailing" constant="7" id="g95-2F-N7D"/>
+                    <constraint firstAttribute="bottom" secondItem="nSi-dz-FKk" secondAttribute="bottom" constant="1" id="kzz-j0-SwI"/>
+                    <constraint firstItem="9hO-z0-u5w" firstAttribute="leading" secondItem="asv-El-rxN" secondAttribute="leading" id="lry-FW-Fc1"/>
+                    <constraint firstItem="9hO-z0-u5w" firstAttribute="leading" secondItem="fHR-DB-Ma1" secondAttribute="leading" constant="2" id="pxe-Hx-YQ8"/>
+                    <constraint firstItem="9hO-z0-u5w" firstAttribute="top" secondItem="asv-El-rxN" secondAttribute="top" id="q7J-5n-DSG"/>
+                    <constraint firstItem="9hO-z0-u5w" firstAttribute="trailing" secondItem="asv-El-rxN" secondAttribute="trailing" id="qEb-vo-pId"/>
+                    <constraint firstItem="vwq-eT-B8Q" firstAttribute="top" secondItem="fHR-DB-Ma1" secondAttribute="top" constant="2" id="t9T-pE-Y8n"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imageViewHeightConstraint" destination="J6y-7F-G2u" id="lKR-Gu-Myf"/>
+                <outlet property="nameLabel" destination="vwq-eT-B8Q" id="HZj-7J-CIq"/>
+                <outlet property="serialNumberLabel" destination="nSi-dz-FKk" id="vWb-WR-PRS"/>
+                <outlet property="thumbnailView" destination="9hO-z0-u5w" id="R3c-jH-LDA"/>
+                <outlet property="valueLabel" destination="G9T-qN-8D2" id="jFS-Hl-ftX"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
