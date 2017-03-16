@@ -6,7 +6,7 @@ online guide for transferring emails with their associated labels/folders from o
 account to another.
 
 If you're comfortable doing basic things on the terminal, then this is
-your guide. Note that this guide is for Mac users &#8212; a separate guide
+your guide. Note that this guide is for Mac users&#8212;a separate guide
 will be written for those using Windows.
 
 ## 1. Download and set up `got-your-back`
@@ -20,7 +20,7 @@ Download the latest release of `got-your-back` from this
 [link](https://github.com/jay0lee/got-your-back/releases).
 It should look something like `gyb-1.0-macos.tar.xz`.
 
-Open terminal.app, and &#8212; starting with `cd` &#8212; type the following to
+Open terminal.app, and&#8212;starting with `cd`&#8212;type the following to
 change to the directory that contains the download:
 ```
 $ cd ~/Downloads
