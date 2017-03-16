@@ -6,8 +6,8 @@ online guide for transferring emails with their associated labels/folders from o
 account to another.
 
 If you're comfortable doing basic things on the terminal, then this is
-your guide. Note that this guide is for Mac users&#8212;a separate guide
-will be written for those using Windows.
+your guide. Note that this guide is for Mac users. For the Windows guide, go
+[here](./gmail-transfer-guide-windows.md).
 
 ## 1. Download and set up `got-your-back`
 There's a command line tool with a cute name (`got-your-back`) on GitHub that
