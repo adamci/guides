@@ -20,8 +20,8 @@ Download the latest release of `got-your-back` from this
 [link](https://github.com/jay0lee/got-your-back/releases).
 It should look something like `gyb-1.0-macos.tar.xz`.
 
-Open terminal.app and change to the directory that contains the download with
-the following command:
+Open terminal.app, and &#8212; starting with `cd` &#8212; type the following to
+change to the directory that contains the download:
 ```
 $ cd ~/Downloads
 ```
