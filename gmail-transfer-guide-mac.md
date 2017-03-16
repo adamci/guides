@@ -62,8 +62,6 @@ confirmation screen which says `The authentication flow has completed.`.
 
 Looking back at the terminal, the backup process should have begun
 ```
-$ ./gyb --email old.email@gmail.com --action backup --local-folder my_backup
-
 Using backup folder my_backup
 Got 22648 Message IDs
 GYB needs to examine 22648 messages
