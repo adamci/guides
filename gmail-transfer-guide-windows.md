@@ -1,13 +1,13 @@
 # How to transfer your email (with labels!) from one Gmail account to another
-#### *Mac Edition*
+#### *Windows Edition*
 For the obsessive among us who carefully curate their emails into
 different folders (which in Gmail are called "labels"), there is no straightforward
 online guide for transferring emails with their associated labels/folders from one
 account to another.
 
 If you're comfortable doing basic things on the terminal, then this is
-your guide. Note that this guide is for Mac users. For the Windows guide, go
-[here](./gmail-transfer-guide-windows.md).
+your guide. Note that this guide is for Windows users. For the Mac guide, go
+[here](./gmail-transfer-guide-mac.md).
 
 ## 1. Download and set up `got-your-back`
 There's a command line tool with a cute name (`got-your-back`) on GitHub that
@@ -18,18 +18,21 @@ another account.
 
 Download the latest release of `got-your-back` from this
 [link](https://github.com/jay0lee/got-your-back/releases).
-It should look something like `gyb-1.0-macos.tar.xz`.
+It should look something like `gyb-1.0-windows.zip`.
 
-Open terminal.app, and&#8212;starting with `cd`&#8212;type the following to
-change to the directory that contains the download, hitting enter to run the
-command:
+Go to your downloads folder at `C:\Users\<username>\Downloads` and unzip the
+directory by right-clicking and selecting `Extract All...`. To make things
+simple, set the field that says `Files will be extracted to this folder:` to
+your Downloads directory at `C:\Users\<username>\Downloads`. You should now
+see a folder called `gyb` in Downloads.
+
+Open PowerShell by typing `Windows key + r` and then writing `powershell` in the
+`Run` window, clicking `OK`.
+
+Starting with `cd`, type the following to change to the directory that contains
+`got-your-back`, hitting enter to run the command:
 ```
-$ cd ~/Downloads
-```
-Unzip the download with `tar`, and then enter the unzipped directory:
-```
-$ tar -zxf gyb-1.0-macos.tar.xz
-$ cd gyb
+> cd ~\Downloads\gyb
 ```
 
 ## 2. Backup
@@ -38,7 +41,7 @@ to `new.email@gmail.com`. This would take just two lines on the terminal.
 
 First, to back up:
 ```
-$ ./gyb --email old.email@gmail.com --action backup --local-folder my_backup
+> .\gyb.exe --email old.email@gmail.com --action backup --local-folder my_backup
 ```
 
 A prompt will appear looking like this:
@@ -76,7 +79,7 @@ backed up 900 of 22648 messages
 Now go and make some tea. This process can take over an hour, if you have more
 than 3 GB of emails. But when the prompt is done, your emails will be all backed
 up, with the contents of the backup in a local directory called `my_backup`
-located in your downloads folder at `~/Downloads/gyb/my_backup`.
+located in your downloads folder at `C:\Users\<username>\Downloads\gyb\my_backup`.
 
 ## 3. Restore
 You're now going to take your local backup and restore it to your new email,
@@ -85,7 +88,7 @@ account to another.
 
 To restore, type the following:
 ```
-$ ./gyb --email new.email@gmail.com --action restore --local-folder my_backup
+> .\gyb.exe --email new.email@gmail.com --action restore --local-folder my_backup
 ```
 
 As with `old.email@gmail.com`, you will once again see a prompt with options
@@ -109,7 +112,7 @@ sign that the magic is working!
 You can close the terminal once it's done restoring. The last step is
 entirely in the browser!
 
-As a cleanup step, don't forget to delete, `gyb-1.0-macos.tar.xz` and `gyb`, both
+As a cleanup step, don't forget to delete, `gyb-1.0-windows.zip` and `gyb`, both
 located in your downloads folder. They are no longer needed.
 
 ## 4. Set up forwarding
