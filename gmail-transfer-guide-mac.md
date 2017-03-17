@@ -6,7 +6,7 @@ online guide for transferring emails with their associated labels/folders from o
 account to another.
 
 If you're comfortable doing basic things on the terminal, then this is
-your guide. Note that this guide is for Mac users &#8212; a separate guide
+your guide. Note that this guide is for Mac users&#8212;a separate guide
 will be written for those using Windows.
 
 ## 1. Download and set up `got-your-back`
@@ -20,8 +20,9 @@ Download the latest release of `got-your-back` from this
 [link](https://github.com/jay0lee/got-your-back/releases).
 It should look something like `gyb-1.0-macos.tar.xz`.
 
-Open terminal.app and change to the directory that contains the download with
-the following command:
+Open terminal.app, and&#8212;starting with `cd`&#8212;type the following to
+change to the directory that contains the download, hitting enter to run the
+command:
 ```
 $ cd ~/Downloads
 ```
@@ -60,10 +61,8 @@ Press `7` and then the enter key, and a prompt will appear in your browser.
 Enter your credentials and press `Allow`. Then you should see a
 confirmation screen which says `The authentication flow has completed.`.
 
-Looking back at the terminal, the backup process should have begun
+Looking back at the terminal, the backup process should have begun:
 ```
-$ ./gyb --email old.email@gmail.com --action backup --local-folder my_backup
-
 Using backup folder my_backup
 Got 22648 Message IDs
 GYB needs to examine 22648 messages
