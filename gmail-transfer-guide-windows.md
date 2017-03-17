@@ -119,7 +119,7 @@ located in your downloads folder. They are no longer needed.
 > Note: this last step is optional in the case that `old.email@gmail.com` continues
 > to receive emails.
 
-Open your old email account in gmail and click on the settings ![][settings_button]
+Open your old email account in Gmail and click on the settings ![][settings_button]
 button. Click `Settings` and the tab called `Forwarding and POP/IMAP`. Then click
 on the button that says `Add a forwarding address`.
 
@@ -165,7 +165,7 @@ restoring 10 messages (20941/22644)
 ERROR: 400: Invalid From header. Skipping message restore, you can retry later with --fast-restore
 restoring 1 messages (22644/22644)  
 ```
-This message crops up if there's something weird about the message being restored.
+This warning appears if there's something weird about the message being restored.
 This can either be that the message has an unusual label (for example, weird
 characters or the label name is a reserved name) or, as I learned, the sender of
 the message (the `From` field) is unusually formatted or too long.
