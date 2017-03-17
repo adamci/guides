@@ -29,8 +29,8 @@ see a folder called `gyb` in Downloads.
 Open PowerShell by typing `Windows key + r` and then writing `powershell` in the
 `Run` window, clicking `OK`.
 
-Next, change to the directory that contains `got-your-back` by entering the
-following, starting with `cd`:
+Starting with `cd`, type the following to change to the directory that contains
+`got-your-back`, hitting enter to run the command:
 ```
 > cd ~\Downloads\gyb
 ```
@@ -64,7 +64,7 @@ Press `7` and then the enter key, and a prompt will appear in your browser.
 Enter your credentials and press `Allow`. Then you should see a
 confirmation screen which says `The authentication flow has completed.`.
 
-Looking back at the terminal, the backup process should have begun
+Looking back at the terminal, the backup process should have begun:
 ```
 Using backup folder my_backup
 Got 22648 Message IDs
