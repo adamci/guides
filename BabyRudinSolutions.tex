@@ -1,0 +1,409 @@
+\documentclass[a4paper,11pt]{article}
+\author{Adam Cimpeanu}
+\title{Principles of Mathematical Analysis Solutions}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{IEEEtrantools}
+\usepackage{hyperref}
+
+\hypersetup{colorlinks, linkcolor=blue}
+\begin{document}
+\maketitle
+\tableofcontents
+
+\newpage
+
+\section{Chapter 1: The Real and Complex Number Systems}
+
+
+\subsection{Problem 1}
+Given $r \neq 0$ that is rational and can be expressed as a reduced fraction
+$p/q$ and irrational x.
+
+Assume $r+x$ is rational, and can therefore be expressed as $n/m$ where at most
+one of n and m are even.
+\begin{IEEEeqnarray}{rCl}
+    n/m & = & r+x = p/q + x \\
+    x & = & n/m - r/x = \frac{n \cdot x - r \cdot m}{m \cdot x}
+\end{IEEEeqnarray}
+Thus x can be expressed as a ratio of integers and is thus rational, a
+    contradiction.
+
+The multiplicative case is similar. Assume r*x is rational. Keeping the same
+    notation
+\begin{IEEEeqnarray}{rCl}
+    r \cdot x & = & n/m \\
+    p/q \cdot x & = & n/m \\
+    x & = & \frac{n \cdot q}{p \cdot m}
+\end{IEEEeqnarray}
+Showing that x is also a ratio of integers, a contradiction.
+
+
+\subsection{Problem 2}
+We start by proving that $\sqrt{3}$ is irrational.
+
+Suppose it is rational, such that $\sqrt{3}$ can be expressed as a fully
+reduced $n/m$. This gives us:
+\begin{equation}
+    3 m^2 = n^2
+\end{equation}
+$m$ and $n$ must have the same parity, and they cannot both be even without
+contradicting the assumption that they're both fully reduced. Therefore, they
+are both odd and can be reexpressed as follows:
+\begin{IEEEeqnarray}{rCl}
+    m & = & 2 k_{1} + 1 \\
+    n & = & 2 k_{2} + 1
+\end{IEEEeqnarray}
+Combining these equations and simplifying yields:
+\begin{IEEEeqnarray}{rCl}
+    3 (2 k_{1} + 1)^2 & = & (2 k_{2} + 1)^2 \\
+    12 k_{1}^2 + 12 k_{1} + 3 & = & 4 k_{2}^2 + 4 k_{2} + 1 \\
+    6 k_{1}^2 + 6 k_{1} + 1 & = & 2 k_{2}^2 + 2 k_{2}
+\end{IEEEeqnarray}
+The left side is odd and the right side is even, a contradiction.
+
+Equipped with this knowledge, we turn back to $\sqrt{12}$. Assume it is rational
+and can be expressed as a ratio of reduced $n$ and $m$. As before, we write
+\begin{equation}
+    12 m^2 = n^2
+\end{equation}
+$n$ must be even, and so if we subsitute $n=2k$
+\begin{IEEEeqnarray}{rCl}
+    12 m^2 & = & 4 k^2 \\
+    3 & = & \frac{k^2}{m^2}
+\end{IEEEeqnarray}
+Implying that $\sqrt{3}$ is rational, a contradiction.
+
+
+\subsection{Problem 3}
+\begin{IEEEeqnarray}{rCl}
+    y & = & 1 \cdot y = ((1/x) \cdot x) \cdot y = (1/x) \cdot (xy) \\
+    & = & (1/x) \cdot (xz) = ((1/x) \cdot x) \cdot z = 1 \cdot z = z
+\end{IEEEeqnarray}
+Which proves (a). Setting $z=1$ gives us (b). (c) is a result of multiplying
+both sides of $xy = 1$ by $1/x$. (d) is derived from (c) if we substitute
+$x$ for $1/y$.
+
+
+\subsection{Problem 4}
+Given that $E$ is a nonempty subset of an ordered set, and that $\alpha$ is
+the lower bound of $E$ and $\beta$ is the upper bound. By the definition of
+lower bound and upper bounds, we know that for any $x \in E$, $\alpha \leq x$
+and $x \leq \beta$. Thus $\alpha \leq \beta$.
+
+
+\subsection{Problem 5}
+Given nonempty $A$ bounded below, let us define $\alpha = \inf A$. $\alpha$ has
+the property that for any lower bound $\gamma$, $\gamma \leq \alpha$. $-\alpha$
+must be an upper bound on $-A$, because $\alpha \leq x \ \forall x \in A$ implies
+$x \leq -\alpha \ \forall x \in -A$.
+
+And as $\alpha = \inf A$, no $\beta > \alpha$ is a lower bound for $A$, which
+implies that no $-\beta < -\alpha$ is an upper bound for $-A$, which means,
+$-\alpha = \sup -A$.
+
+
+\subsection{Problem 6}
+For this problem, we need to define negative and zero exponents. If we hold
+$b^{x}b^{y}=b^{x+y}$ for integers $x$, $y$ and $b>1$, then $b^{1}b^{0}$
+should equal $b^{1}$, which implies $b^{0}=1$ from 1.15(b). In a similar
+vein, we would expect $b^{x}b^{-x}=b^{0}$, which combined with 1.15(c),
+gives us that $b^{-x}=\frac{1}{b}^{x}$.
+
+For $b > 1$ and $n$,$m$ integers, we first establish a few results.
+\begin{IEEEeqnarray}{rCl}
+    (b^m)^{1/n} & = & (\underbrace{b \cdot b \cdot \ldots \cdot b} _\text{m})^{1/n}
+    = \underbrace{b^{1/n} \cdot b^{1/n} \cdot \ldots b^{1/n}} _\text{m} = (b^{1/n})^{m}
+    \label{eq:1.6.1} \\
+    y^{n} & = & a = b \Rightarrow y = a^{1/n} = b^{1/n} \label{eq:1.6.2} \\
+    y^{m} & = & b^{n \cdot m} = (b^{n})^{m} \Rightarrow y = b^{n} \label{eq:1.6.3}
+\end{IEEEeqnarray}
+The latter two are corallaries of Theorem 1.21, which proves the uniqueness of
+the nth root.
+
+From the problem, we know that $m$, $n$, $p$, and $q$ are integers with $n > 0$
+and $q > 0$, and that $r = m/n = p/q$. If either $m$ or $p$ are $0$, the
+result is trivially true. If $m$ is negative, then $p$ must be as well, and by
+the definition established above, we could rewrite the proof for $c=1/b$ and
+positive $m$ and $p$. Thus, we only treat the case where $m$ and $p$ are positive.
+
+We know that $mq = pn$. Using the $b$ from before, we can write
+$b^{m q} = b^{p n}$. Using results in (\ref{eq:1.6.2}) and (\ref{eq:1.6.3}), we can
+take the qth root of both sides, giving us $b^{m} = (b^{p n})^{1/q}$. Using
+(\ref{eq:1.6.1}), we rewrite as $b^{m} = (b^{p/q})^{n}$ and take the nth root by
+the same principles, yielding $b^{m/n} = b^{p/q}$ and proving (a).
+
+Let $r$ and $s$ be rational and represented by fully reduced fractions $m/n$
+and $p/q$ respectively, where $n$, $m$, $p$, and $q$ are all integers, and
+$m > 0$, $q > 0$ as before. We take advantage of these facts when exponents are
+integers:
+
+\begin{IEEEeqnarray}{rCl}
+    b^{n} b^{p} & = & \underbrace{b \cdot b \cdot \ldots \cdot b} _\text{n}
+    \cdot \underbrace{b \cdot b \cdot \ldots \cdot b} _\text{p} =
+    \cdot \underbrace{b \cdot b \cdot \ldots \cdot b} _\text{n+p} = b^{n+p} \\
+    (b^{n})^{p} & = & \underbrace{b^{n} \cdot b^{n} \cdot \ldots \cdot b^{n}} _\text{p}
+    = \underbrace{b \cdot b \cdot \ldots \cdot b} _\text{pn} = b^{pn} \\
+    b^{\frac{1}{np}} & = & (b^{1/n})^{1/p}
+\end{IEEEeqnarray}
+The last of which is derived from iterations of Theorem 1.21. Then we have:
+\begin{IEEEeqnarray}{rCl}
+    b^{r}b^{s} & = & b^{m/n}b^{p/q} = (b^{m/n})^{q/q}(b^{p/q})^{n/n}
+    = (b^{mq})^{\frac{1}{nq}}(b^{pn})^{\frac{1}{nq}} \IEEEnonumber\\
+    & = & b^{\frac{mq+pn}{nq}} = b^{m/n + p/q} = b^{r+s}
+\end{IEEEeqnarray}
+Which proves (b).
+
+For real $x$, we define $B(x)$ to be the set of $b^{t}$, where $t$ is rational
+and $t \leq x$. Recall that $b$ is a real number greater than 1. Critical to
+this part is the fact that for rational $n$ and $m$:
+\begin{equation}
+    b^{n}<b^{m} \iff n<m \label{eq:1.6.4}
+\end{equation}
+Combining the fact that for $S(t) = \{a \in \mathbb{Q} \ | \ a \leq t\}$,
+$\sup S(t)= t$, with (\ref{eq:1.6.4}) yields the result that $\sup B(r) = b^{r}$
+for rational $r$. Given that $\mathbb{R}$ has the least upper bound property,
+we know that $\sup S(x)$ for real $x$ exists and is $x$. By (\ref{eq:1.6.4}),
+we then conclude that $\sup B(x) = b^{x}$, proving (c).
+
+For the final part, let $x,y \in \mathbb{R}$:
+\begin{IEEEeqnarray}{rCl}
+    b^{x+y} & = & \sup B(x+y) = \sup \{b^{t} | t \in \mathbb{Q}, t \leq x+y\} \\
+    & = & \sup \{b^{t+s} | t,s \in \mathbb{Q}, t+s \leq x+y\} \\
+    & = & \sup \{b^{t}b^{s} | t,s \in \mathbb{Q}, t+s \leq x+y\} \\
+    & = & \sup \{b^{t} | t \in \mathbb{Q}, t \leq x\}
+    \sup \{b^{s} | s \in \mathbb{Q}, s \leq y\} \\
+    & = & \sup B(x) \sup B(y) = b^{x}b^{y}
+\end{IEEEeqnarray}
+
+
+\subsection{Problem 7}
+Let $b>1$ and $n$ be a positive integer n. $b^{n}-1 \geq n(b-1)$ if $n=1$.
+By way of induction, we assume the inequality is true for $n$ and prove
+$n+1$.
+\begin{IEEEeqnarray}{rCl}
+    b^{n+1}-1 > b^{n+1}-b = b(b^{n}-1) \geq bn(b-1) > (n+1)(b-1)
+\end{IEEEeqnarray}
+The last part is true because $n(b-1)-1>0$. So we have (a)
+
+Substitute $c=b^{1/n}$ to get (b).
+
+If $t>1$ and $n > \frac{b-1}{t-1}$, then by (b),
+$n(t-1) > n(b^{1/n}-1)$, which simplifies to $b^{1/n}<t$, proving (c).
+
+(d) follows as described by the problem.
+
+Set $t = y^{-1}b^{w}$ and repeat the logic in (d) to get (e).
+
+For $A=\{w|b^{w}<y\}$, define $x=\sup A$. We know that $b^{x}$ cannot be larger
+than $y$, because then by (d), there would be a $b^{x-1/n}$ that would serve
+as a smaller upper bound. So it must be the case that $b^{x} \leq y$. But it
+also cannot be the case that $b^{x} < y$, because then there would be, by (c),
+a $b^{x+1/n} <y$ that would would invalidate $x$ as an upper bound. So it must
+be the case that $\sup A = x$, proving (f).
+
+$x$ must be unique because otherwise, one of $x_1$ or $x_2$ would be smaller, and
+thus, one of $b^{x_1}$ and $b^{x_2}$ would be less than $y$.
+
+
+\subsection{Problem 8}
+By our defined ordering, suppose $i>0$. then by 1.17(ii), $i^{2}=-1>0$.
+Reapplying the same rule, $-1 \cdot i = -i$, but also be equal to zero, a
+contradiction with 1.18(a). The same can be done starting with $i<0$ and
+writing it as $-i>0$.
+
+
+\subsection{Problem 9}
+Let $z = a + bi$ and $w = c + di$. If $a<c$, by the lexicographic order
+definition, $z<w$, and $z$ cannot be greater than or equal to $w$. If
+$a>c$, $z>w$ and $z$ cannot be less than or equal to $w$. Then consider
+the cases in which $a=c$. Either it's the case that $b=d$, at which point,
+$z=w$, and $z$ cannot be greater than or less than $w$. Or $b<d$, in which
+case $z<w$ and $z$ cannot be greater than or equal to $w$. Finally, if $b>d$,
+it cannot be the case that $z$ is equal to or less than $w$, it must be greater.
+This proves the first condition of an ordered set.
+
+Now we assume that $x < y$ and $y < z$. Either $x$ and $z$ have the same first
+terms and $z$'s second term is larger than $x$'s. Or $z$'s first term must be
+larger than $x$'s first term, meaning the transitive property holds, making the
+lexicographic order define an ordered set.
+
+Define $E \subset \mathbb{C}$ where all $a+bi$ have $a$ equal to some real $r$.
+Now imagine the complex number $(r+1)+ci$ for any real $c$. This new number
+bounds $E$, but there is no least upper bound on $E$, becaus for any imagined
+bound $(r+1)+ci$, $(r+1)+(c+1)i$ is a larger bound.
+
+
+\subsection{Problem 10}
+Let $z = a + bi$ and $w = u + vi$ and $a = \sqrt{\frac{|w|+u}{2}}$
+$b = \sqrt{\frac{|w|-u}{2}}$. Then:
+\begin{IEEEeqnarray}{rCl}
+    z^{2} & = & a^{2} - b^{2} + 2abi = \frac{|w|+u}{2} - \frac{|w|-u}{2} + 
+    \sqrt{(|w|+u)(|w|-u)} \ i \\
+    & = & u + \sqrt{|w|^{2}-u^{2}}i = u + vi
+\end{IEEEeqnarray}
+Thus $z^{2}=w$ when $v \geq 0$. Similarly:
+\begin{IEEEeqnarray}{rCl}
+    \overline{z}^{2} & = & a^{2} - b^{2} - 2abi =
+    \frac{|w|+u}{2} - \frac{|w|-u}{2} - \sqrt{(|w|+u)(|w|-u)} \ i \\
+    & = & u - \sqrt{|w|^{2}-u^{2}}i = u - vi
+\end{IEEEeqnarray}
+Therefore $\overline{z}^{2}=w$ when $v \leq 0$. By this construction, every
+complex number $w$ has two square roots, either $z$ and $-z$ or $\overline{z}$
+and $-\overline{z}$, with the exception of $0$, which only has the root of $0$.
+
+
+\subsection{Problem 11}
+Let $z=a+bi$. Suppose $|z|=\sqrt{a^{2}+b^{2}}=r$. Then let
+$w=\frac{a}{r}+\frac{b}{r}i$. Then we get $z = rw$, uniquely constructed.
+
+
+\subsection{Problem 12}
+$|z_1| = |z_1|$ by definition. Now we assume
+$|z_1 + z_2 + \ldots + z_n| \leq |z_1| + |z_2| + \ldots + |z_n|$ and aim to
+prove the case for $n+1$. By 1.33(e):
+\begin{IEEEeqnarray}{rCl}
+    |(z_1 + z_2 + \ldots + z_n) + z_{n+1}| & \leq & |z_1 + z_2 + \ldots + z_n| +
+        |z_{n+1}| \\
+    & \leq & |z_1| + |z_2| + \ldots + |z_n| + |z_{n+1}|
+\end{IEEEeqnarray}
+Which completes the proof by induction.
+
+
+\subsection{Problem 13}
+Let $x = a + bi$ and $y = c + bi$. We begin with:
+\begin{IEEEeqnarray}{rCl}
+    (ad - bc)^{2} & \geq & 0 \\
+    a^{2}d^{2} - 2abcd + b^{2}c^{2} & \geq & 0 \\
+    a^{2}c^{2} + b^{2}c^{2} + a^{2}d^{2} + b^{2}d^{2} & \geq & a^{2}c^{2} +
+        2abcd + b^{2}d^{2} = (ac+bd)^{2} \\
+    (a^{2}+b^{2})(c^{2}+d^{2}) & \geq & (ac+bd)^{2} \\
+    \sqrt{(a^{2}+b^{2})(c^{2}+d^{2})} & \geq & ac + bd
+\end{IEEEeqnarray}
+From this seemingly odd relation, we can write this seemingly odd relation:
+\begin{IEEEeqnarray}{rCl}
+    \sqrt{a^{2}+b^{2}+c^{2}+d^{2}-2\sqrt{(a^{2}+b^{2})(c^{2}+d^{2})}} & \leq &
+        \sqrt{a^{2}+b^{2}+c^{2}+d^{2}-2(ac+bd)} \IEEEnonumber\\
+    |\sqrt{a^{2}+b^{2}} - \sqrt{c^{2}+d^{2}}| & \leq &
+        \sqrt{a^{2}-2ac+c^{2}+b^{2}-2bd+d^{2}} \IEEEnonumber\\
+    |\sqrt{a^{2}+b^{2}} - \sqrt{c^{2}+d^{2}}| & \leq &
+        \sqrt{(a-c)^{2}+(b-d)^{2}} \IEEEnonumber\\
+    ||x|-|y|| & \leq & |(a-c)+(b-d)i| = |x-y| \IEEEnonumber
+\end{IEEEeqnarray}
+Proving the desired inequality
+
+
+\subsection{Problem 14}
+If $z$ is a complex number such that $|z|=1$, then we have:
+\begin{IEEEeqnarray}{rCl}
+    |1+z|^{2} + |1-z|^{2} & = & (1+z)(1+\overline{z}) + (1-z)(1-\overline{z})\\
+    & = & 1 + z + \overline{z} + z\overline{z} + 1 - z - \overline{z} +
+        z\overline{z} \\
+        & = & 2 + 1 + 1 = 4
+\end{IEEEeqnarray}
+
+
+\subsection{Problem 15}
+Using the notation for the proof of theorem 1.35, the Schwarz inequality is
+trivially true if either $A$ or $B$ are 0. Otherwise, imagine that the
+complex vectors $\mathbf{a}$ and $\mathbf{b}$ are linearly dependent, which is
+to say $a_i=k b_i \ \forall i=1 \ldots n$ and some real number $k$. Then we have
+\begin{IEEEeqnarray}{rCl}
+    \left|\sum_{j=1}^n a_j \overline{b_j}\right|^2 & = &
+    \left|k \sum_{j=1}^n a_j \overline{a_j}\right|^2 =
+    \left|k \sum_{j=1}^n |a_j|\right|^2 = \\
+    k^2 \sum_{j=1}^n |a_j|^2 & = & \sum_{j=1}^n |a_j|^2 \sum_{j=1}^n |k a_j|^2 =
+    \sum_{j=1}^n |a_j|^2 \sum_{j=1}^n |b_j|^2
+\end{IEEEeqnarray}
+
+
+\subsection{Problem 16}
+An intuition of this problem is best captured in the $k=3$ setting. Imagine
+$\mathbf{x}$, $\mathbf{y}$, and $\mathbf{z}$ as three vectors in 3D space.
+$|x-y|$ is really just the distance between the points of the vectors. In
+this problem, $\mathbf{z}$ must be equidistant from the other two vectors,
+which basically means it must line on the plane that lies strictly between
+$\mathbf{x}$ and $\mathbf{y}$. If the tip of $\mathbf{z}$ lies exactly at
+the midpoint of the line between the tips of $\mathbf{x}$ and $\mathbf{y}$,
+which is to say, if it is $\frac{1}{2}(\mathbf{x}+\mathbf{y})$, then it's
+distance from each vector $r$ will be $1/2d$. From that image of the triangle,
+you can see that there's no $\mathbf{z}$ thats less than $1/2d$ away from
+$\mathbf{x}$ and $\mathbf{y}$, and there are infinite options on the splitting
+plane for $\mathbf{z}$ that's more than $1/2d$ away from both.
+
+In the $k=1,2$ cases, there are no solutions for (a), and the solutions for
+(b) and (c) are the same.
+
+
+\subsection{Problem 17}
+\begin{IEEEeqnarray}{rCl}
+    |x+y|^2+|x-y|^2 & = & \sum_{i=1}^n x_i^2 + 2x_i y_i + y_i^2 +
+    \sum_{i=1}^n x_i^2 - 2x_i y_i + y_i^2 \\
+    & = & 2\sum_{i=1}^n x_i^2 + y_i^2 = 2|x|^2 + 2|y|^2
+\end{IEEEeqnarray}
+This result can be interpreted as saying that the volume of a parallelogram
+spanned by $\mathbf{x}$ and $\mathbf{y}$ is equal to the hypotenuse of the
+right triangle created by those two vectors.
+
+
+\subsection{Problem 18}
+If we expand $\mathbf{x} \cdot \mathbf{y}=0$ and move the terms, we get:
+\begin{IEEEeqnarray}{rCl}
+    x_1 y_1 & = & -\sum_{i=2}^n x_i y_i \\
+    y_1 & = & \frac{-\sum_{i=2}^n x_i y_i}{x_1}
+\end{IEEEeqnarray}
+So for any arbitrary $\mathbf{x}$ and a mostly arbitrary $\mathbf{y}$, we can
+set $y_1$ to the above value to yield the desired expression.
+
+When $k=1$, $xy=0$ yields only one value for $y$.
+
+
+\subsection{Problem 19}
+The solution simply needs to be verified in this problem. We plug
+$3\mathbf{c} = 4\mathbf{b}-\mathbf{a}$ and $3r=2|\mathbf{b}-\mathbf{a}|$ into
+$|\mathbf{x}-\mathbf{c}|=r$.
+\begin{IEEEeqnarray}{rCl}
+    |\mathbf{x}-\mathbf{c}| & = & r \IEEEnonumber\\
+    |\mathbf{x}-\frac{4}{3}\mathbf{b}+\frac{1}{3}\mathbf{a}| & = &
+        \frac{2}{3}|\mathbf{b}-\mathbf{a}| \IEEEnonumber\\
+    |\mathbf{x}|^2 - \frac{8}{3}\mathbf{xb} + \frac{2}{3}\mathbf{xa} +
+        \frac{16}{9}|\mathbf{b}|^2 + \frac{1}{9}|\mathbf{a}|^2 +
+        \frac{8}{9}\mathbf{ab} & = & \frac{4}{9}|\mathbf{b}|^2 -
+        \frac{8}{9}|\mathbf{ab}| + \frac{4}{9}|\mathbf{a}|^2 \IEEEnonumber\\
+    |\mathbf{x}|^2 - \frac{8}{3}\mathbf{xb} + \frac{2}{3}\mathbf{xa} +
+        \frac{12}{9}|\mathbf{b}|^2 + \frac{1}{3}|\mathbf{a}|^2 & = & 0
+        \IEEEnonumber\\
+    3|\mathbf{x}|^2 - 8\mathbf{xb} + 2\mathbf{xa} + 4|\mathbf{b}|^2 +
+        |\mathbf{a}|^2 & = & 0 \IEEEnonumber\\
+    4|\mathbf{x}|^2 - 8\mathbf{xb}  4|\mathbf{b}|^2 + & = & |\mathbf{x}|^2 -
+        2\mathbf{xa} + |\mathbf{a}|^2 \IEEEnonumber\\
+    4(\mathbf{x}-\mathbf{b})^2 & = & (\mathbf{x}-\mathbf{a})^2\IEEEnonumber\\
+    2|\mathbf{x}-\mathbf{b}| & = & |\mathbf{x}-\mathbf{a}| \IEEEnonumber
+\end{IEEEeqnarray}
+
+
+\subsection{Problem 20}
+If we eliminate condition (III) from the definition of a cut, Step 2 and Step 3
+are still valid, as they doesn't depend on (III). Thus we can still conclude
+that $\mathbf{R}$ is an ordered set with the least upper bound property.
+
+As for the addition properties of fields, the proofs for (A1) through (A3) from
+the text still hold.
+
+We redefine the zero element $0^*$ to be the set of all negative rational
+numbers and the number $0$, which preserves properties (I) and (II) of being a
+cut. Then the proof for (A4) in the text still holds once we account for the
+number 0. For $r \in \alpha$, $r + 0 \leq r$, so $r + 0 \in \alpha$. And
+because $s+0=s \ \forall s \in \alpha$, $s \in \alpha + 0$.
+
+Trying to prove (A5) demonstrates why trying to define a $0^*$ with a largeset
+element, 0, and thus, try to define cuts with property (III), fails to produce
+a field. For if we defined $\gamma \in \mathbf{R}$ as the set of all rational
+numbers, which is still a cut by our new relaxed definition, it is the case 
+that there's no $\alpha$ such that $\alpha + \gamma = 0^*$, making (A5)
+impossible to prove. $\gamma$ has no largest value, so $\alpha + \gamma$ has
+no largest value, so it cannot be the case that $0^* \subset \alpha + \gamma$.
+
+
+\end{document}
